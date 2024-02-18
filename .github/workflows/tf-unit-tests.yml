@@ -62,5 +62,5 @@ jobs:
       if: success() || failure()
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: results.sarif
+        sarif_file: ./Azure/environments/prod/results.sarif
         category: checkov
