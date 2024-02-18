@@ -42,6 +42,11 @@ jobs:
     - name: Terraform Format
       working-directory: ./Azure/environments/prod
       run: terraform fmt -check -recursive 
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8      
     
     # Perform a security scan of the terraform code using checkov
     - name: Run Checkov action
