@@ -7,12 +7,6 @@ permissions:
       id-token: write
       contents: read
 
-env:
-  ARM_CLIENT_ID: "${{ secrets.AZURE_CLIENT_ID }}"
-  ARM_SUBSCRIPTION_ID: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
-  ARM_TENANT_ID: "${{ secrets.AZURE_TENANT_ID }}"
-  TF_DATA_DIR: "Azure/environments/prod"
-
 jobs:
   terraform-unit-tests:
     name: 'Terraform Unit Tests'
@@ -40,7 +34,7 @@ jobs:
     - name: Terraform Init
       run: |
         # cd Azure/environments/prod
-        terraform init -reconfigure
+        terraform init -reconfigure -backend-config=Azure/environmrnts/prod
 
     # Validate terraform files
     - name: Terraform Validate
