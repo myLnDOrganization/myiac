@@ -32,9 +32,10 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
+      working-directory: ./Azure/environments/prod
       run: |
         # cd Azure/environments/prod
-        terraform init -reconfigure -backend-config=Azure/environmrnts/prod
+        terraform init -reconfigure
 
     # Validate terraform files
     - name: Terraform Validate
