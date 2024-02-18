@@ -45,7 +45,6 @@ jobs:
     
     # Perform a security scan of the terraform code using checkov
     - name: Run Checkov action
-      working-directory: ./Azure/environments/prod
       id: checkov
       uses: bridgecrewio/checkov-action@master
       with: 
@@ -54,7 +53,6 @@ jobs:
     # Upload results to GitHub Advanced Security
     - name: Upload SARIF file
       if: success() || failure()
-      working-directory: ./Azure/environments/prod
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: results.sarif
