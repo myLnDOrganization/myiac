@@ -21,7 +21,7 @@ jobs:
     - name: Terraform Init
       run: |
         cd Azure/environments/prod
-        terraform init -reconfigure -backend=false
+        terraform init -reconfigure
 
     # Validate terraform files
     - name: Terraform Validate
