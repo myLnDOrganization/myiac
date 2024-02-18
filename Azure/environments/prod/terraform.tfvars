@@ -1,0 +1,41 @@
+# Environment
+environment = "prod"
+# Resource Group
+resource_group_name     = "myResourceGroup"
+resource_group_location = "eastus"
+# Virtual Network
+virtual_network_name          = "myVirtualNetwork"
+virtual_network_address_space = ["10.0.0.0/16"]
+virtual_network_location      = "eastus"
+# Subnet
+subnet_name             = "mySubnet"
+subnet_address_prefixes = ["10.0.0.0/18"]
+# Container Registry
+container_registry_name              = "myContainerRegistry"
+container_registry_sku               = "Premium"
+container_registry_location          = "eastus"
+container_registry_georep_loc        = "North Europe"
+container_registry_georep_zr_enabled = true
+# Kubernetes Cluster
+kubernetes_cluster_name                          = "myKubernetesCluster"
+kubernetes_cluster_location                      = "eastus"
+kubernetes_cluster_default_node_pool_name        = "defnodepool"
+kubernetes_cluster_default_node_pool_vm_size     = "Standard_D2_v2"
+kubernetes_cluster_dns_prefix                    = "myK8sClusterDnsPrefix"
+kubernetes_cluster_identity_type                 = "SystemAssigned"
+kubernetes_cluster_default_node_pool_node_count  = 1
+container_registry_id                            = ""
+kubernetes_cluster_version                       = "1.25.11"
+kubernetes_cluster_network_plugin                = "azure"
+kubernetes_cluster_network_policy                = "calico"
+kubernetes_cluster_service_cidr                  = "10.1.0.0/19"
+kubernetes_cluster_dns_service_ip                = "10.1.0.10"
+kubernetes_cluster_sku_tier                      = "Standard"
+kubernetes_cluster_max_surge                     = 25
+kubernetes_cluster_node_pool_name                = "usernodepool"
+kubernetes_cluster_node_pool_vm_size             = "Standard_D2_v2"
+kubernetes_cluster_node_pool_enable_auto_scaling = true
+kubernetes_cluster_node_pool_min_count           = 3
+kubernetes_cluster_node_pool_max_count           = 5
+kubernetes_cluster_node_pool_max_surge           = 25
+subnet_id                                        = ""
