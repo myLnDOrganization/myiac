@@ -50,7 +50,7 @@ jobs:
       uses: bridgecrewio/checkov-action@master
       with: 
         framework: terraform
-        directory: ./Azure/environments/prod
+        # directory: ./Azure/environments/prod
 
     # Upload results to GitHub Advanced Security
     - name: Upload SARIF file
